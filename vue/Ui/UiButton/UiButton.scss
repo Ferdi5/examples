@@ -1,0 +1,121 @@
+.ui-button {
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 150ms;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 16px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    background: var(--color-sky-800);
+    color: var(--color-white);
+    border: solid var(--color-sky-800) 1px;
+    font-weight: 600;
+
+    &:hover {
+      background: var(--color-sky-700);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+      background: var(--color-sky-700);
+    }
+
+    &:active {
+      background: var(--color-sky-600);
+    }
+
+    &:disabled {
+      background: var(--color-sky-400);
+      color: var(--color-gray-200);
+      border-color: var(--color-sky-400);
+    }
+  }
+
+  &.secondary {
+    background: var(--color-white);
+    color: var(--color-gray-900);
+    border: solid var(--color-gray-400) 1px;
+    font-weight: 600;
+
+    &:hover {
+      background: var(--color-gray-200);
+    }
+
+    &:focus {
+      background: var(--color-gray-200);
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      background: var(--color-gray-300);
+    }
+
+    &:active:focus {
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &:disabled {
+      background: var(--color-gray-100);
+      color: var(--color-gray-500);
+      border: solid var(--color-gray-300) 1px;
+    }
+  }
+
+  &.primary-alt {
+    background: var(--color-white);
+    color: var(--color-sky-800);
+    border: solid var(--color-sky-800) 1px;
+
+    &:focus {
+      background: var(--color-gray-200);
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover {
+      background: var(--color-sky-800);
+      color: var(--color-white);
+      border-color: var(--color-sky-800);
+    }
+
+    &:active {
+      color: var(--color-white);
+      background: var(--color-sky-600);
+    }
+
+    &:disabled {
+      background: var(--color-white);
+      color: var(--color-sky-800);
+      border: solid var(--color-sky-800) 1px;
+    }
+  }
+
+  &.danger {
+    background: var(--color-white);
+    color: var(--color-red-500);
+    border: solid var(--color-gray-400) 1px;
+
+    &:hover {
+      background: var(--color-gray-200);
+    }
+
+    &:focus {
+      background: var(--color-gray-200);
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      background: var(--color-gray-300);
+    }
+
+    &:disabled {
+      background: var(--color-gray-400);
+      color: var(--color-gray-800);
+      border: solid var(--color-gray-400) 1px;
+    }
+  }
+}

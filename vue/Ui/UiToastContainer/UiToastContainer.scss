@@ -1,0 +1,28 @@
+.ui-toast-container {
+  width: max-content;
+  height: auto;
+  padding: 24px;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column-reverse;
+  z-index: 80;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  > :not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  > :not(:first-child) {
+    margin-bottom: 0.75rem;
+  }
+  .visibility-hidden {
+    opacity: 0;
+    transition:
+      visibility 0.3s linear,
+      opacity 0.3s linear;
+    visibility: hidden;
+  }
+}

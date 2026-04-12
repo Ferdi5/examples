@@ -1,0 +1,21 @@
+.ui-select-search-input {
+  position: relative;
+
+  .input-wrapper {
+    input {
+      padding-right: 32px;
+    }
+
+    &:after {
+      font-family: "FontAwesome";
+      content: "\f107";
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: 12px;
+      top: 0;
+      bottom: 0;
+      color: var(--color-gray-800);
+    }
+  }
+}

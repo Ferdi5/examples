@@ -1,0 +1,37 @@
+.ui-dropdown {
+  box-shadow:
+    0 2px 3px rgba(0, 0, 0, 0.02),
+    0 13px 28px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  background: var(--color-white);
+  cursor: pointer;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 50;
+  overflow: auto;
+  max-height: 320px;
+  width: 100%;
+
+  .item.selected {
+    background: var(--color-gray-300);
+    font-weight: 600;
+  }
+
+  > div {
+    padding: 8px 16px;
+    color: var(--color-gray-800);
+
+    &:hover {
+      background: var(--color-gray-300);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .identifier {
+    font-size: 12px;
+    font-style: italic;
+  }
+}

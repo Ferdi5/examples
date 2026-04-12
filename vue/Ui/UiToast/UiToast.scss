@@ -1,0 +1,41 @@
+.toast {
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 150ms;
+  width: 420px;
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--color-gray-700);
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-success {
+    border: solid var(--color-green-500) 1px;
+    background: var(--color-green-100);
+    text-align: center;
+  }
+
+  &-error {
+    border: solid var(--color-red-500) 1px;
+    background: var(--color-red-100);
+  }
+
+  &-enter-active {
+    transition: transform 0.3s ease;
+  }
+
+  &-enter-from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  &-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,8 @@
+# IDE Settings
+.idea/
+.vscode/
+*.swp
+
+# OS Files
+.DS_Store
+Thumbs.db

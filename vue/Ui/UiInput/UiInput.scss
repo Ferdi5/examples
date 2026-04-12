@@ -1,0 +1,49 @@
+.ui-input {
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 150ms;
+  border-color: var(--color-gray-400);
+  border-radius: 8px;
+  border-width: 1px;
+  color: var(--color-gray-600);
+  padding: 0 8px 0 8px;
+  height: 30px;
+  width: 100%;
+
+  &::placeholder {
+    font-size: 16px;
+    color: var(--color-gray-500);
+    font-weight: 400;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: var(--color-gray-300);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(225, 176, 255, 0.25);
+    border-color: var(--color-purple-700);
+    outline: none;
+  }
+
+  &.error {
+    border-color: var(--color-red-500);
+    box-shadow: none;
+  }
+}
+
+.fade-in-text {
+  animation: fadeInText ease 0.15s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    color: rgba(112, 118, 123, 0.5);
+  }
+  100% {
+    color: rgba(112, 118, 123, 1);
+  }
+}
