@@ -8,8 +8,13 @@ use App\Domains\CustomerCreditProposal\Models\CustomerCreditProposalEvaluation;
 
 final class CustomerCreditProposalEvaluationRepository
 {
+    public function __construct(
+        protected Company $company
+    ) {
+    }
+
     public function fetchOpenEvaluations(string $creditProposalId): Collection {
-        return CustomerCreditProposalEvaluation::query()
+        return $this->company::query()
             ->where('customer_credit_proposal_id', $creditProposalId)
             ->where(fn (Builder $query) => $query
                 ->whereIn('status', [
